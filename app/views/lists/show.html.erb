@@ -5,6 +5,7 @@
     <div class="container">
      <div class="add-button">
       <%= link_to "Add a film to the list", new_list_bookmark_path(@list), class: 'btn btn-info' %>
+      <%= link_to "Add a review to the list", new_list_review_path(@list), class: 'btn btn-info' %>
      </div>
     <div class="row justify-content-center">
 
@@ -32,5 +33,11 @@
   <div class="return_button">
   <%= link_to "Return to list menu", lists_path, class: 'btn btn-primary' %>
 </div>
+        <ul class="list-group">
+          <% @list.reviews.each do |review| %>
+                  <p>Review: <%= review.description%></p>
+                  <p>Average rating: <%=review.rating%>     <p>
+          <% end %>
+          </ul>
 
 </div>

@@ -4,10 +4,9 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list = List.find(params[:id]) 
-    #@bookamrk = Bookmark.find(params[:id])
-    #@bookmark = Bookmark.find_by(list: @list, movie: movie)
+    @list = List.find(params[:id])
     @bookmark = Bookmark.new
+    @review = Review.new(list: @list)
   end
 
   def new
