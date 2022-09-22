@@ -1,18 +1,20 @@
-<h1>This is the index page <h1>
+<div class= "background">
+  <h1>This is the index page <h1>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>All lists</h1>
-      <ul class="list-group mb-3">
-        <% @lists.each do |list| %>
-          <li class="list-group-item">
-          <p> <%= link_to list.name, list_path(list) %> <p> 
-          <p> <%= link_to "delete", list, method: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{list.name}"} %> </p>
-          </li>
-        <% end %>
-      </ul>
-      <%= link_to "Create a new list", new_list_path, class: 'btn btn-primary' %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h1>All lists</h1>
+        <ul class="list-group mb-3">
+          <% @lists.each do |list| %>
+            <li class="list-group-item">
+            <p> <%= link_to list.name, list_path(list) %> <p>
+            <p> <%= link_to "delete", list, method: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{list.name}"} %> </p>
+            </li>
+          <% end %>
+        </ul>
+        <%= link_to "Create a new list", new_list_path, class: 'btn btn-primary' %>
+      </div>
     </div>
   </div>
 </div>
