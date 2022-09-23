@@ -8,6 +8,8 @@
             <%= link_to "Add a review to the list", new_list_review_path(@list), class: 'btn btn-info' %>
           </div>
 
+          <%= cl_image_tag @list.photo.key, height: 300, width: 300, crop: :fill %>
+
          <div class="row justify-content-center">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
               <ul class="list-group">
