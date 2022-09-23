@@ -1,30 +1,39 @@
 <div class= "background">
-  <h1>This is the index page <h1>
 
-  <%= form_with url: lists_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a list"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+
+
 
   <div class="container">
+  <h1>This is the index page <h1>
+    <%= form_with url: lists_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a list"
+         %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
     <div class="row justify-content-center">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <h1>All lists</h1>
-        <ul class="list-group mb-3">
           <% @lists.each do |list| %>
-            <li class="list-group-item">
-            <%= cl_image_tag list.photo.key, height: 300, width: 300, crop: :fill %>
-            <p> <%= link_to list.name, list_path(list) %> <p>
-            <p> <%= link_to "delete", list, method: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{list.name}"} %> </p>
-            </li>
+            <div class="index_card">
+              <%= link_to list_path(list) do %>
+                <%= cl_image_tag list.photo.key, height: 400, width: 400, crop: :fill %>
+                <div class="index_card_info">
+                  <div class="index_card_name">
+                    <h1> <%= list.name %> <h1>
+                  </div>
+                  <div class="index_card_description">
+                    <h2><%= list.description  %> <h2>
+                  </div>
+                  <p> <%= link_to '<i class="fa-solid fa-trash"></i>'.html_safe , list, method: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{list.name}"} %> </p>
+                </div>
+               <% end %>
+            </div>
           <% end %>
-        </ul>
-        <%= link_to "Create a new list", new_list_path, class: 'btn btn-primary' %>
-        <%= link_to "See all lists", lists_path, class: 'btn btn-primary' %>
+         <%= link_to "Create a new list", new_list_path, class: 'btn btn-primary' %>
+         <%= link_to "See all lists", lists_path, class: 'btn btn-primary' %>
          <%= link_to "About", about_page_path, class: 'btn btn-primary' %>
          <%= link_to "Static Test", static_page_path, class: 'btn btn-primary' %>
       </div>
