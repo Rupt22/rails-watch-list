@@ -1,43 +1,46 @@
 <div class="background">
- <div class= "list-name">
-  <h1>You are viewing <%= @list.name %> <h1>
- </div>
+  <div class= "list-name">
+    <h1>You are viewing <%= @list.name %> <h1>
+  </div>
     <div class="container">
-     <div class="add-button">
-      <%= link_to "Add a film to the list", new_list_bookmark_path(@list), class: 'btn btn-info' %>
-      <%= link_to "Add a review to the list", new_list_review_path(@list), class: 'btn btn-info' %>
-     </div>
-    <div class="row justify-content-center">
+          <div class="add-button">
+            <%= link_to "Add a film to the list", new_list_bookmark_path(@list), class: 'btn btn-info' %>
+            <%= link_to "Add a review to the list", new_list_review_path(@list), class: 'btn btn-info' %>
+          </div>
 
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <ul class="list-group">
-          <% @list.movies.each do |movie| %>
-          <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-            <%# <li class="list-group-item"> %>
+         <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+              <ul class="list-group">
+                <% @list.movies.each do |movie| %>
+                 <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+                  <div class="card-product">
+                    <%= image_tag movie.poster_url , size: "120x120", class: "card-product-img"%>
+                      <div class="card-product-infos">
+                        <h2><%= movie.title %></h2>
+                        <p>Synopsys: <%= movie.overview%></p>
+                        <p>My comment: <%=bookmark.comment%>  <p>
+                        <p>Average rating: <%=movie.rating%>     <p>
+                        <p> <%= link_to "delete", bookmark, method: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %> </p>
+                      </div>
+                  </div>
+                <% end %>
+             </ul>
+           </div>
+        </div>
+
+    <ul class="list-group">
+          <% @list.reviews.each do |review| %>
               <div class="card-product">
-            <%= image_tag movie.poster_url , size: "120x120", class: "card-product-img"%>
-              <div class="card-product-infos">
-                  <h2><%= movie.title %></h2>
-                  <p>Synopsys: <%= movie.overview%></p>
-                  <p>My comment: <%=bookmark.comment%>  <p>
-                  <p>Average rating: <%=movie.rating%>     <p>
-                  <p> <%= link_to "delete", bookmark, method: "delete", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"} %> </p>
+                 <div class="card-product-infos">
+                   <p>List Review: <%= review.description%></p>
+                   <p>Rating: <%=review.rating%><p>
+                 </div>
               </div>
-              </div>
-            <%# </li> %>
           <% end %>
         </ul>
-      </div>
     </div>
-  </div>
   <div class="return_button">
   <%= link_to "Return to list menu", lists_path, class: 'btn btn-primary' %>
-</div>
-        <ul class="list-group">
-          <% @list.reviews.each do |review| %>
-                  <p>Review: <%= review.description%></p>
-                  <p>Average rating: <%=review.rating%>     <p>
-          <% end %>
-          </ul>
 
+  </div>
 </div>
