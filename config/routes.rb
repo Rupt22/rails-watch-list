@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'lists#index'
+  root to: 'application#home'
 
   get "about_page", to: "application#about_page"
   get "static_page", to: "application#static_page"

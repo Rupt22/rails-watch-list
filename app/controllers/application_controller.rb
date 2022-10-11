@@ -7,4 +7,9 @@ class ApplicationController < ActionController::Base
 
   def another_page
   end
+
+  def home
+  end
+
+  layout false, only: [:home]
 end
