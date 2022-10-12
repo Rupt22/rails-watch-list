@@ -1,14 +1,21 @@
-body {
-  background-image: url('https://cdn.pixabay.com/photo/2018/01/03/01/17/film-3057394_1280.jpg');
-}
 
-.home_page_2{
+.home_page_2 {
 
+  background-image: url(popcorn_2.jpg);
+  color: blue;
 
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.home_content {
+  text-align: center;
+
 }

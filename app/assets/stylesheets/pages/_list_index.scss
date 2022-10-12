@@ -1,0 +1,67 @@
+.list_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+}
+
+.list_card_container {
+display: flex;
+justify-content: center;
+background-color: white;
+
+}
+
+.list_header {
+background-color: white;
+padding-top: 45px;
+padding-bottom: 45px;
+border-bottom: black 2px solid;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.list_header_content {
+  width: 1300px;
+  text-align: center;
+}
+
+.list_header_content h1 {
+  margin-bottom: 16px;
+  font-size: large;
+}
+
+.index_footer {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+border-top: 2px black solid;
+width: 100%;
+
+}
+
+.index_footer_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 50px;
+
+}
+
+.lists_title {
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.lists_title p{
+  font-size: large;
+}
+.new_list_button {
+  display: flex;
+  justify-content: center;
+}

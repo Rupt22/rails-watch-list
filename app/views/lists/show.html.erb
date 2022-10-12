@@ -9,7 +9,7 @@
           </div>
 
                   <% if @list.photo.attached? %>
-                     <%= cl_image_tag list.photo.key, height: 400, width: 400, crop: :fill %>
+                     <%= cl_image_tag @list.photo.key, height: 400, width: 400, crop: :fill %>
                    <% else %>
                      <%= image_tag("error.png", height: '400', width: '400') %>
                    <% end %>

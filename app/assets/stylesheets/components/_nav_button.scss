@@ -1,0 +1,19 @@
+.nav_button {
+  background-color: rgb(240, 214, 44);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 180px;
+  margin: 20px;
+  border: 1px black solid;
+  border-radius: 8px;
+  text-align: center;
+
+}
+
+.nav_button:hover {
+  background-color: rgb(240, 171, 44);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}

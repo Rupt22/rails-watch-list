@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def home
+    @skip_navbar = true
   end
 
-  layout false, only: [:home]
 end
