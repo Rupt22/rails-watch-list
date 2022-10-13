@@ -8,12 +8,12 @@
 .list_card_container {
 display: flex;
 justify-content: center;
-background-color: white;
+background-color: #dea64bba;
 
 }
 
 .list_header {
-background-color: white;
+background-color: #ffb7c3ab;
 padding-top: 45px;
 padding-bottom: 45px;
 border-bottom: black 2px solid;
@@ -35,11 +35,9 @@ justify-content: center;
 
 .index_footer {
 display: flex;
-align-items: center;
 justify-content: center;
-background-color: white;
+background-color: #ffb7c3ab;
 border-top: 2px black solid;
-width: 100%;
 
 }
 
@@ -54,14 +52,17 @@ width: 100%;
 
 .lists_title {
   text-align: center;
-  margin: 10px;
-  margin-top: 20px;
+  padding: 10px;
+  padding-top: 20px;
+  background-color: #dea64bba;
 }
 
 .lists_title p{
   font-size: large;
+
 }
 .new_list_button {
   display: flex;
   justify-content: center;
+  background-color: #dea64bba;
 }

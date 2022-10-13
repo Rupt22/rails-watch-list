@@ -1,0 +1,50 @@
+.list_show_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid black;
+  padding-top: 15px;
+}
+
+.list_show_image img {
+  border: 1px black solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; ;
+
+}
+
+.list-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.return_button {
+  padding: 35px;
+  display: flex;
+  align-items: flex-end;
+justify-content: center;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px black solid;
+}
+
+.film_list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 15px;
+  border-bottom: 2px black solid;
+}
+
+.review_list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 15px;
+  border-bottom: 2px black solid;
+}

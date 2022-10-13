@@ -1,5 +1,5 @@
 .nav_button {
-  background-color: rgb(240, 214, 44);
+  background-color:#6f1a0794;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -13,7 +13,30 @@
 }
 
 .nav_button:hover {
-  background-color: rgb(240, 171, 44);
+  background-color:#6f1a0794;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}
+
+
+.nav_button_bookmark {
+  display: block;
+  background-color:#6f1a0794;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px black solid;
+  border-radius: 8px;
+  text-align: center;
+
+}
+
+.nav_button_bookmark:hover {
+  background-color:#6f1a0794;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
 }

@@ -1,20 +1,13 @@
-<div class="background">
-  <h1>This is the new review form <h1>
 
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md-6 offset-lg-3">
-        <div class="bg-white rounded p-3 shadow">
-          <h3>Please create your review below</h3>
-          <% @list = List.find(params[:list_id]) %>
-          <%= simple_form_for [@review], url:list_reviews_path(@list), method: :post  do |f| %>
-          <%# <%= simple_form_for [@list, @review] do |f| %>
-            <%= f.input :rating, placeholder: 'Please enter your rating 1-5' %>
-            <%= f.input :description, :label => 'Your thoughts about the list', placeholder: 'Enter your thoughts about the list' %>
-            <%= f.submit class: "btn btn-primary" %>
-          <% end %>
-        </div>
-      </div>
+<div class="review_new">
+    <div class="add_review">
+      <h3 class="bookmark_center">Please create your review below</h3>
+      <% @list = List.find(params[:list_id]) %>
+      <%= simple_form_for [@review], url:list_reviews_path(@list), method: :post  do |f| %>
+      <%# <%= simple_form_for [@list, @review] do |f| %>
+        <%= f.input :rating, placeholder: 'Please enter your rating 1-5' %>
+        <%= f.input :description, :label => 'Your thoughts about the list', placeholder: 'Enter your thoughts about the list' %>
+        <%= f.submit class: "nav_button_bookmark" %>
+      <% end %>
     </div>
-  </div>
 </div>
