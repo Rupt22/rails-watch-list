@@ -1,21 +1,24 @@
 
+.home-page-container  {
+  height: 100%;
+}
+
 .home_page_2 {
 
+
   background-image: url(popcorn_2.jpg);
-  color: blue;
-
+  min-height: 100vh;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home_content {
   text-align: center;
+  color: blue;
 
 }
